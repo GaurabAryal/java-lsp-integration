@@ -1,0 +1,53 @@
+{
+  "name": "java-lsp-integration",
+  "displayName": "Java LSP Integration",
+  "description": "Integrates a custom Java LSP with VS Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "java",
+        "aliases": [
+          "java",
+          "java"
+        ],
+        "extensions": [
+          ".java"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "java",
+        "scopeName": "source.java",
+        "path": "./syntaxes/java.tmLanguage.json"
+      }
+    ]
+  },
+  "main": "./extension.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.2.2",
+    "vscode-languageclient": "^8.1.0",
+    "vscode-languageserver-protocol": "^3.17.3"
+  },
+  "activationEvents": [
+    "onLanguage:java"
+  ],
+  "devDependencies": {
+    "vscode": "^1.1.37"
+  }
+}

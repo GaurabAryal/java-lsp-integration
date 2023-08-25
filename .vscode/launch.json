@@ -1,0 +1,30 @@
+// A launch configuration that launches the extension inside a new window
+// Use IntelliSense to learn about possible attributes.
+// Hover to view descriptions of existing attributes.
+// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+{
+	"version": "0.2.0",
+    "configurations": [
+
+        {
+            "args": [
+                "--extensionDevelopmentPath=/Users/gaurab.aryal/java-lsp-integration"
+            ],
+            "name": "Launch Extension",
+            "outFiles": [
+                "/Users/gaurab.aryal/java-lsp-integration/extension.js"
+            ],
+            "request": "launch",
+            "type": "extensionHost"
+        },
+        
+        {
+            "name": "Extension",
+            "type": "extensionHost",
+            "request": "launch",
+            "args": [
+                "--extensionDevelopmentPath=/Users/gaurab.aryal/java-lsp-integration"
+            ]
+        }
+    ]
+}
